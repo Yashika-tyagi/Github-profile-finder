@@ -1,0 +1,229 @@
+/* *{
+    margin:0
+    font-family :"Roboto";
+   
+} */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.user_name{
+    color:white;
+}
+
+.user_img{
+  display:flex;
+  justify-content: center;
+  animation-name: user_img;
+  animation-timing-function: ease-in-out;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  
+}
+.user_img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid pink;
+}
+
+
+
+@keyframes user_img{
+    from{
+        transform: translateX(-20px);
+        opacity:0.5;
+    }
+    to{
+         transform: translateX(20px);
+         opacity:1;
+    }
+
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+    
+.input-wrapper{
+    position: relative;
+    width:500px;
+    height:50px;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 15px;
+   overflow:hidden;
+  animation-name: input-wrapper;
+  animation-timing-function: ease-in-out;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-direction: linear;
+  border:3px solid pink;
+   
+   gap:10px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   
+}
+@keyframes input-wrapper{
+    from{
+         transform:translateY(20px);
+         opacity:0.5;
+    }
+    to{
+        transform:translateY(0);
+         opacity:1;
+        
+    }
+}
+
+.name{
+    font-size:30px;
+    outline:none;
+    border:none;
+    padding:10px;
+    box-shadow: 0 0 10px #ff4d6d;
+    text-shadow: 0 0 10px darkred;
+    
+
+}
+.btn {
+  padding: 15px 15px;
+   background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: end;
+  border-radius:15px;
+  
+}
+.btn:hover{
+   
+    background:linear-gradient(#ff9a9e 20%, green 50%, #fbc2eb 80%);
+    transform: scale(1.05);
+    text-shadow: 0 0 5px white, 0 0 10px pink;
+    
+}
+.row{
+    display:flex;
+    justify-content:center;
+    width:850px;
+    box-shadow: 5px,42px,46px rgba(0,0,0,0.75);
+    gap:200px;
+}
+
+
+
+.reponame{
+    font-size:2rem;
+    color:white;
+}
+.details{
+    font-size:1rem;
+    color:white;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    gap:50px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+     padding-right: 2px;
+   
+   
+}
+
+
+.h1{
+    font-size: 3rem;
+    font-style: bold;
+}
+.follow{
+    color:white;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    gap:120px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border:1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background:linear-gradient(#ff9a9e 20%, #fbc2eb 80%);
+}
+
+
+
+.error{
+  display: none;
+  font-size: 30px;
+  text-align: center;
+  animation: fade 1s ease-in-out;
+  margin: 10px auto;
+  color:whitesmoke;
+}
+@keyframes fade {
+  from { opacity: 0.5; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.heading{
+    font-size:4rem;
+    color: #ff4d6d;
+    font-weight: 600;
+    animation-name: slideFade,glow;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:1,infinite;
+    animation-duration:2s,1.5s;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-direction: normal,alternate;
+    text-shadow: 0 0 2px #ff4d6d, 0 0 10px #ff4d6d;
+
+
+    text-align: center;
+
+}
+@keyframes slideFade{
+    from{ transform:translateX(-50px);
+        opacity:0;
+   };
+    to{transform:translateX(50px);
+        opacity:1;
+    };
+}
+
+
+
+.rep_details .reponame,
+.rep_details .details {
+  animation: repoFade 0.6s ease forwards;
+}
+@keyframes repoFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
